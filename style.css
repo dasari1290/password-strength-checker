@@ -1,0 +1,85 @@
+body {
+  background: #0a0e27;
+  color: #e0e6ff;
+  font-family: system-ui, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.card {
+  background: #1a1f3a;
+  padding: 2rem;
+  border-radius: 14px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-input {
+  width: 100%;
+  padding: 0.8rem;
+  background: #0f1429;
+  border: 1px solid #2a3050;
+  color: #e0e6ff;
+  border-radius: 8px;
+}
+
+/* Toggle */
+.toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Generate */
+.generate-btn-icon {
+  position: absolute;
+  right: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.strength-meter-container {
+  height: 10px;
+  background: #111;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.strength-meter {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg,#ff3333,#ffaa00,#66ff88,#00ff88);
+  transition: width 0.4s ease;
+}
+
+.strength-very-weak { color: #ff3333; }
+.strength-weak { color: #ff6666; }
+.strength-medium { color: #ffaa00; }
+.strength-strong { color: #66ff88; }
+.strength-very-strong { color: #00ff88; }
+
+.checklist-list li.completed {
+  color: #00ff88;
+}
+
+.security-warning {
+  margin-top: 1rem;
+  color: #ffaa00;
+  font-size: 0.9rem;
+}

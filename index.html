@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <div class="header-icon">🔐</div>
+    <h1>Password Strength Checker</h1>
+    <p class="subtitle">Local evaluation • No passwords stored</p>
+  </header>
+
+  <div class="card">
+
+    <div class="input-group">
+      <label for="password">Enter Password</label>
+      <div class="password-wrapper">
+
+        <input
+          id="password"
+          type="password"
+          class="password-input"
+          placeholder="Type your password..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+
+        <!-- Generate Password -->
+        <button
+          id="generateBtn"
+          class="generate-btn-icon"
+          title="Generate Strong Password"
+          type="button">
+          ✨
+        </button>
+
+        <!-- Toggle Visibility -->
+        <button
+          id="toggleBtn"
+          class="toggle-btn"
+          title="Show/Hide Password"
+          type="button">
+          <span class="toggle-icon">👁️</span>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="strength-section">
+      <div class="strength-header">
+        <span class="strength-title">Password Strength:</span>
+        <span id="strengthStatus" class="strength-label">No password entered</span>
+      </div>
+
+      <div class="strength-meter-container">
+        <div id="strengthMeter" class="strength-meter"></div>
+      </div>
+
+      <div class="strength-info">
+        <span id="strengthPercentage">0%</span>
+        <span id="charCount">0 characters</span>
+      </div>
+    </div>
+
+    <div class="complexity-section">
+      <span class="complexity-title">Password Complexity:</span>
+      <span id="complexityStatus">-</span>
+    </div>
+
+    <div class="checklist-section">
+      <h3>Password Requirements</h3>
+      <ul id="checklistList" class="checklist-list">
+        <li data-check="length"><span class="check-icon">✗</span> At least 12 characters</li>
+        <li data-check="uppercase"><span class="check-icon">✗</span> Uppercase letter</li>
+        <li data-check="lowercase"><span class="check-icon">✗</span> Lowercase letter</li>
+        <li data-check="number"><span class="check-icon">✗</span> Number</li>
+        <li data-check="special"><span class="check-icon">✗</span> Special character</li>
+      </ul>
+    </div>
+
+    <div class="exposure-section">
+      <span class="exposure-title">Estimated Time to Crack:</span>
+      <span id="exposureStatus">-</span>
+    </div>
+
+    <div class="security-warning">
+      ⚠️ Passwords are not saved, logged, or transmitted.
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    Password Strength Checker • Security-first design
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
